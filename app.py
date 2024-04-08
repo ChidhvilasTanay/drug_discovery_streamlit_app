@@ -24,7 +24,7 @@ def filedownload(df):
 # Model building
 def build_model(input_data):
     # Reads in saved regression model
-    load_model = pickle.load(open('corona_virus_model2.pkl', 'rb'))
+    load_model = pickle.load(open('corona_virus_model3.pkl', 'rb'))
     # Apply model to make predictions
     prediction = load_model.predict(input_data)
     st.header('**Prediction output**')
@@ -41,10 +41,10 @@ def build_model(input_data):
 st.markdown("""
 # Bioactivity Prediction App 
 
-This app allows you to predict the bioactivity towards inhibting the `Acetylcholinesterase` enzyme. `Acetylcholinesterase` is a drug target for Alzheimer's disease.
+This app allows you to predict the bioactivity towards inhibiting the `SARS coronavirus 3C-like proteinase` target protein.
 
 - App built in `Python` + `Streamlit`
-- Descriptor calculated using [PaDEL-Descriptor]
+- Descriptors calculated using [PaDEL-Descriptor]
 ---
 """)
 
